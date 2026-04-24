@@ -270,12 +270,11 @@ export default function Index() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {[
-                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/files/c599c4ed-8800-4343-88eb-7195e18a452a.jpg", title: "Столпы Творения", desc: "Туманность Орёл, NGC 6611" },
-                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/files/9a2b99fd-71be-49e1-90f6-ae4253c3e132.jpg", title: "Крабовидная туманность", desc: "Остаток сверхновой, M1" },
-                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/files/48a3a9a3-8148-418c-ace0-76b9bdb1d73e.jpg", title: "Галактика Андромеды", desc: "Ближайшая к нам галактика, M31" },
-                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/files/9891bb83-a67c-4ea2-b270-2cb96081c879.jpg", title: "Галактика Водоворот", desc: "Взаимодействующие галактики, M51" },
-                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/files/ce1add9b-9524-41c2-8d4d-be9dbccd6392.jpg", title: "Туманность Бабочка", desc: "Планетарная туманность NGC 6302" },
-                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/files/5182e726-1e8b-442b-9ee5-83988aad3a21.jpg", title: "Hubble Deep Field", desc: "Тысячи далёких галактик" },
+                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/bucket/d93f929e-66a3-43ef-a11a-80a642bee93b.jpg", title: "Рождение звезды", desc: "Протозвезда HH 24, туманность Ориона" },
+                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/bucket/67cb90fd-38c0-498f-8e5a-6cf95cb27c50.jpg", title: "Крабовидная туманность", desc: "Остаток сверхновой 1054 года, M1" },
+                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/bucket/9024503d-e5cc-4d98-91ef-3b7b321cafe8.jpg", title: "Галактика Bedin I", desc: "Карликовая галактика в скоплении NGC 6752" },
+                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/bucket/c3c541f4-e9bf-4afa-ab13-c4b44d1e95fd.jpg", title: "Туманность Песочные часы", desc: "Планетарная туманность MyCn 18" },
+                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/bucket/8ef1c812-08b6-476a-b47a-0ec534efca24.jpg", title: "Туманность Конская голова", desc: "Тёмная туманность в созвездии Ориона, IC 434" },
               ].map((img, i) => (
                 <div
                   key={i}
