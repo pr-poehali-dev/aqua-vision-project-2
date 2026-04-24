@@ -170,7 +170,15 @@ export default function Index() {
               </p>
 
               <div className="flex justify-center">
-                <ShinyButton className="px-8 py-3 text-base">исследовать</ShinyButton>
+                <ShinyButton
+                  className="px-8 py-3 text-base"
+                  onClick={() => {
+                    const el = document.getElementById("features")
+                    el?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" })
+                  }}
+                >
+                  исследовать
+                </ShinyButton>
               </div>
             </div>
           </div>
