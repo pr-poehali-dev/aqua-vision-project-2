@@ -5,13 +5,15 @@ import { Feature } from "@/components/ui/feature-with-advantages"
 import { BentoPricing } from "@/components/ui/bento-pricing"
 import { AboutQuote } from "@/components/ui/about-quote"
 import { cn } from "@/lib/utils"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
+import Icon from "@/components/ui/icon"
 
 export default function Index() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const pricingSectionRef = useRef<HTMLDivElement>(null)
   const aboutSectionRef = useRef<HTMLDivElement>(null)
   const contactSectionRef = useRef<HTMLDivElement>(null)
+  const [lightbox, setLightbox] = useState<{ src: string; title: string; desc: string } | null>(null)
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current
@@ -279,7 +281,8 @@ export default function Index() {
               ].map((img, i) => (
                 <div
                   key={i}
-                  className="group relative overflow-hidden rounded-lg border border-white/10 aspect-square"
+                  onClick={() => setLightbox(img)}
+                  className="group relative overflow-hidden rounded-lg border border-white/10 aspect-square cursor-pointer"
                 >
                   <img
                     src={img.src}
@@ -293,6 +296,34 @@ export default function Index() {
                 </div>
               ))}
             </div>
+
+            {lightbox && (
+              <div
+                className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+                onClick={() => setLightbox(null)}
+              >
+                <button
+                  className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+                  onClick={() => setLightbox(null)}
+                >
+                  <Icon name="X" size={32} />
+                </button>
+                <div
+                  className="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center gap-4"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <img
+                    src={lightbox.src}
+                    alt={lightbox.title}
+                    className="max-h-[80vh] w-full object-contain rounded-lg"
+                  />
+                  <div className="text-center">
+                    <p className="text-white font-semibold font-open-sans-custom text-lg">{lightbox.title}</p>
+                    <p className="text-gray-400 font-open-sans-custom text-sm mt-1">{lightbox.desc}</p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </section>
       </div>
