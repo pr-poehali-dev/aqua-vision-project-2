@@ -275,6 +275,7 @@ export default function Index() {
                 { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/bucket/9024503d-e5cc-4d98-91ef-3b7b321cafe8.jpg", title: "Галактика Bedin I", desc: "Карликовая галактика в скоплении NGC 6752" },
                 { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/bucket/c3c541f4-e9bf-4afa-ab13-c4b44d1e95fd.jpg", title: "Туманность Песочные часы", desc: "Планетарная туманность MyCn 18" },
                 { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/bucket/8ef1c812-08b6-476a-b47a-0ec534efca24.jpg", title: "Туманность Конская голова", desc: "Тёмная туманность в созвездии Ориона, IC 434" },
+                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/bucket/f374f08c-e858-43fd-9001-f8c300685404.jpg", title: "Туманность Вуаль", desc: "Остаток сверхновой в созвездии Лебедя, NGC 6960" },
               ].map((img, i) => (
                 <div
                   key={i}
