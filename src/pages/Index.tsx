@@ -3,13 +3,7 @@ import { FloatingNavbar } from "@/components/FloatingNavbar"
 import { ShinyButton } from "@/components/ui/shiny-button"
 import { Feature } from "@/components/ui/feature-with-advantages"
 import { BentoPricing } from "@/components/ui/bento-pricing"
-import { ContactCard } from "@/components/ui/contact-card"
 import { AboutQuote } from "@/components/ui/about-quote"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useEffect, useRef } from "react"
 
@@ -251,7 +245,8 @@ export default function Index() {
         <section
           id="contact"
           ref={contactSectionRef}
-          className="relative min-w-full snap-start overflow-y-auto px-4 pt-24 pb-20"
+          className="relative min-w-full snap-start overflow-y-auto px-4 pt-24 pb-20 hide-scrollbar"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           <div
             aria-hidden="true"
@@ -263,67 +258,41 @@ export default function Index() {
             )}
           />
 
-          <div className="relative z-10 mx-auto w-full max-w-5xl mt-[5vh]">
-            <ContactCard
-              title="Великие открытия Хаббла"
-              description="За 30+ лет работы телескоп Хаббл сделал более 1,5 миллиона наблюдений, помог определить возраст Вселенной и открыл тёмную энергию. Каждый день — новое окно во Вселенную."
-              contactInfo={[
-                {
-                  icon: MailIcon,
-                  label: "Запущен",
-                  value: "24 апреля 1990 года",
-                },
-                {
-                  icon: PhoneIcon,
-                  label: "Орбита",
-                  value: "559 км над Землёй",
-                },
-                {
-                  icon: MapPinIcon,
-                  label: "Снимков",
-                  value: "более 1,5 млн наблюдений",
-                  className: "col-span-2",
-                },
-              ]}
-            >
-              <form action="" className="w-full space-y-4">
-                <div className="flex flex-col gap-2">
-                  <Label className="text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] font-open-sans-custom">
-                    Ваше имя
-                  </Label>
-                  <Input
-                    type="text"
-                    placeholder="Эдвин Хаббл"
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Label className="text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] font-open-sans-custom">
-                    Email
-                  </Label>
-                  <Input
-                    type="email"
-                    placeholder="star@cosmos.ru"
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Label className="text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] font-open-sans-custom">
-                    Вопрос или тема
-                  </Label>
-                  <Textarea
-                    placeholder="Напишите, что вас интересует в телескопе Хаббл..."
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
-                  />
-                </div>
-                <Button
-                  className="w-full bg-white text-black hover:bg-gray-100 [text-shadow:_0_1px_2px_rgb(0_0_0_/_10%)] font-open-sans-custom"
-                  type="button"
+          <div className="relative z-10 mx-auto w-full max-w-6xl">
+            <div className="mx-auto mb-10 max-w-2xl text-center">
+              <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] font-open-sans-custom">
+                Галерея Хаббла
+              </h1>
+              <p className="text-gray-300 mt-4 text-sm md:text-base font-open-sans-custom [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
+                Реальные снимки телескопа — туманности, галактики и рождение звёзд
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+              {[
+                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/files/c599c4ed-8800-4343-88eb-7195e18a452a.jpg", title: "Столпы Творения", desc: "Туманность Орёл, NGC 6611" },
+                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/files/9a2b99fd-71be-49e1-90f6-ae4253c3e132.jpg", title: "Крабовидная туманность", desc: "Остаток сверхновой, M1" },
+                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/files/48a3a9a3-8148-418c-ace0-76b9bdb1d73e.jpg", title: "Галактика Андромеды", desc: "Ближайшая к нам галактика, M31" },
+                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/files/9891bb83-a67c-4ea2-b270-2cb96081c879.jpg", title: "Галактика Водоворот", desc: "Взаимодействующие галактики, M51" },
+                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/files/ce1add9b-9524-41c2-8d4d-be9dbccd6392.jpg", title: "Туманность Бабочка", desc: "Планетарная туманность NGC 6302" },
+                { src: "https://cdn.poehali.dev/projects/709b279a-21e0-4f87-a7f7-537fb47abd58/files/5182e726-1e8b-442b-9ee5-83988aad3a21.jpg", title: "Hubble Deep Field", desc: "Тысячи далёких галактик" },
+              ].map((img, i) => (
+                <div
+                  key={i}
+                  className="group relative overflow-hidden rounded-lg border border-white/10 aspect-square"
                 >
-                  Отправить вопрос
-                </Button>
-              </form>
-            </ContactCard>
+                  <img
+                    src={img.src}
+                    alt={img.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <p className="text-white font-semibold font-open-sans-custom text-sm [text-shadow:_0_2px_8px_rgb(0_0_0_/_80%)]">{img.title}</p>
+                    <p className="text-gray-300 font-open-sans-custom text-xs mt-0.5">{img.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </div>
