@@ -159,18 +159,18 @@ export default function Index() {
           <div className="mx-auto max-w-4xl">
             <div className="text-center px-0 leading-5">
               <h1 className="mb-8 text-balance text-5xl tracking-tight text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] md:text-6xl lg:text-8xl">
-                <span className="font-open-sans-custom not-italic">Идея.</span>{" "}
-                <span className="font-serif italic">Промпт.</span>{" "}
-                <span className="font-open-sans-custom not-italic">Результат.</span>
+                <span className="font-open-sans-custom not-italic">Телескоп.</span>{" "}
+                <span className="font-serif italic">Хаббл.</span>{" "}
+                <span className="font-open-sans-custom not-italic">Вселенная.</span>
               </h1>
 
               <p className="mb-8 mx-auto max-w-2xl text-pretty leading-relaxed text-gray-300 [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)] font-thin font-open-sans-custom tracking-wide leading-7 text-xl">
-                дизайнер, разработчик или просто любопытный — возьми идею,{" "}
-                <span className="font-serif italic">опиши</span> её и наблюдай, как она оживает
+                30 лет на орбите — и каждый снимок меняет наше представление о{" "}
+                <span className="font-serif italic">космосе</span> и месте человечества во Вселенной
               </p>
 
               <div className="flex justify-center">
-                <ShinyButton className="px-8 py-3 text-base">начать</ShinyButton>
+                <ShinyButton className="px-8 py-3 text-base">исследовать</ShinyButton>
               </div>
             </div>
           </div>
@@ -201,11 +201,10 @@ export default function Index() {
           <div className="relative z-10 mx-auto w-full max-w-5xl">
             <div className="mx-auto mb-10 max-w-2xl text-center">
               <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] font-open-sans-custom">
-                Тарифы и цены
+                Технические характеристики
               </h1>
               <p className="text-gray-300 mt-4 text-sm md:text-base font-open-sans-custom [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
-                Выберите подходящий план. От индивидуальных авторов до корпоративных команд — гибкие
-                тарифы для вашего успеха.
+                Инженерный шедевр — точные параметры телескопа, который изменил астрономию навсегда.
               </p>
             </div>
             <BentoPricing />
@@ -231,10 +230,10 @@ export default function Index() {
           <div className="relative z-10 mx-auto w-full max-w-7xl">
             <div className="mx-auto mb-10 max-w-2xl text-center">
               <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] font-open-sans-custom">
-                О нас
+                История Хаббла
               </h1>
               <p className="text-gray-300 mt-4 text-sm md:text-base font-open-sans-custom [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
-                Узнайте больше о нашей миссии, видении и ценностях, которые движут нами.
+                От идеи Лаймана Спитцера до величайшего космического обсерватория человечества.
               </p>
             </div>
             <AboutQuote />
@@ -258,23 +257,23 @@ export default function Index() {
 
           <div className="relative z-10 mx-auto w-full max-w-5xl mt-[5vh]">
             <ContactCard
-              title="Свяжитесь с нами"
-              description="Если у вас есть вопросы о наших услугах или нужна помощь, заполните форму. Мы стараемся отвечать в течение 1 рабочего дня."
+              title="Великие открытия Хаббла"
+              description="За 30+ лет работы телескоп Хаббл сделал более 1,5 миллиона наблюдений, помог определить возраст Вселенной и открыл тёмную энергию. Каждый день — новое окно во Вселенную."
               contactInfo={[
                 {
                   icon: MailIcon,
-                  label: "Почта",
-                  value: "hello@promptcraft.dev",
+                  label: "Запущен",
+                  value: "24 апреля 1990 года",
                 },
                 {
                   icon: PhoneIcon,
-                  label: "Телефон",
-                  value: "+7 (495) 123-45-67",
+                  label: "Орбита",
+                  value: "559 км над Землёй",
                 },
                 {
                   icon: MapPinIcon,
-                  label: "Адрес",
-                  value: "Москва, Россия",
+                  label: "Снимков",
+                  value: "более 1,5 млн наблюдений",
                   className: "col-span-2",
                 },
               ]}
@@ -282,10 +281,11 @@ export default function Index() {
               <form action="" className="w-full space-y-4">
                 <div className="flex flex-col gap-2">
                   <Label className="text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] font-open-sans-custom">
-                    Имя
+                    Ваше имя
                   </Label>
                   <Input
                     type="text"
+                    placeholder="Эдвин Хаббл"
                     className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
                   />
                 </div>
@@ -295,29 +295,24 @@ export default function Index() {
                   </Label>
                   <Input
                     type="email"
+                    placeholder="star@cosmos.ru"
                     className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
                   <Label className="text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] font-open-sans-custom">
-                    Телефон
+                    Вопрос или тема
                   </Label>
-                  <Input
-                    type="tel"
+                  <Textarea
+                    placeholder="Напишите, что вас интересует в телескопе Хаббл..."
                     className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
                   />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Label className="text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] font-open-sans-custom">
-                    Сообщение
-                  </Label>
-                  <Textarea className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]" />
                 </div>
                 <Button
                   className="w-full bg-white text-black hover:bg-gray-100 [text-shadow:_0_1px_2px_rgb(0_0_0_/_10%)] font-open-sans-custom"
                   type="button"
                 >
-                  Отправить
+                  Отправить вопрос
                 </Button>
               </form>
             </ContactCard>
